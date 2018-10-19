@@ -1,0 +1,31 @@
+﻿<ContentDialog
+    x:Class="Accommodation.UserForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accommodation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="添加用户信息"
+    PrimaryButtonText="添加"
+    SecondaryButtonText="取消"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="UserName" Text="" Margin="5" PlaceholderText="用户名"/>
+        <DatePicker Grid.Row="1"  Name="StartTime" Margin="5"/>
+        <DatePicker Grid.Row="2"  Name="EndTime" Margin="5"/>
+        <ComboBox Grid.Row="3" HorizontalAlignment="Center" Margin="5" Header="权重选择" >
+            <x:String>1</x:String>
+            <x:String>2</x:String>
+            <x:String>3</x:String>
+        </ComboBox>
+    </Grid>
+</ContentDialog>

@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="Accommodation.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accommodation">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Thickness x:Key="ComboBoxHeaderThemeMargin">30,0,0,8</Thickness>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

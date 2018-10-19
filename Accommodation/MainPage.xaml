@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="Accommodation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Accommodation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        
+    </Page.Resources>
+    <Page.TopAppBar>
+        <CommandBar  IsOpen="False" DefaultLabelPosition="Bottom" >
+            <AppBarButton Icon="Add" Label="Add" Background="Transparent" Click="AppBarButton_Click"/>
+        </CommandBar> 
+    </Page.TopAppBar>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ListView>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"  Value="Stretch"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="UserName" Text="{Binding}" Margin="5,0,15,0" TextAlignment="Center" />
+                        <Rectangle Width="2" Grid.Column="1" VerticalAlignment="Stretch" Fill="Black"/>
+                        <TextBlock Name="TimeDuration" Grid.Column="2" Text="{Binding}" HorizontalAlignment="Stretch" Margin="5,0,15,0" TextAlignment="Center"/>
+                        <Rectangle Width="2" Grid.Column="3" VerticalAlignment="Stretch" Fill="Black"/>
+                        <TextBlock Name="Proportion" Grid.Column="4" Text="{Binding}" HorizontalAlignment="Stretch" Margin="5,0,15,0" TextAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            <x:String>5554545454545</x:String>
+            <x:String>ddd</x:String>
+            <x:String>ddd</x:String>
+        </ListView>
+        
+        <StackPanel Name="TotalIfo" Grid.Row="1" Orientation="Horizontal">
+            <TextBox Name="TotalCoast" PlaceholderText="总花费" VerticalAlignment="Top"/>
+            <TextBox Name="WaterCoast" PlaceholderText="水费" VerticalAlignment="Top" Margin="30,0,0,0"/>
+            <TextBox Name="EleCoast" PlaceholderText="电费" VerticalAlignment="Top" Margin="30,0,0,0"/>
+            <TextBlock Name="WaterPrice" Text="电价:1.179" Margin="30,5,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" />
+            <TextBlock Name="ElePrice" Text="水价:5.2" Margin="30,5,0,0" VerticalAlignment="Top"  HorizontalAlignment="Right" TextAlignment="Center"/>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Button Content="计算" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+            <RichTextBlock Margin="0,50,0,0">
+
+            </RichTextBlock>
+        </Grid>
+    </Grid>
+</Page>
